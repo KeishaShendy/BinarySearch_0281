@@ -29,3 +29,30 @@ void input()
         cin >> elemen[i];
     }
 }
+void bubleshortArray()
+{
+    int pass = 1;
+
+    do
+    {
+        for (int j = 0; j <= npanjang - 1 - pass; j++)
+        {
+            if (elemen[j] > elemen[j + 1])
+            {
+                int temp = elemen[j];
+                elemen[j] = elemen[j + 1];
+                elemen[j + 1] = temp;
+            }
+        }
+
+        cout << "\nPass " << pass << "= ";
+        for (int k = 0; k < npanjang; k++)
+        {
+            cout << elemen[k] << " ";
+        }
+        cout << endl;
+
+        pass = pass + 1;
+
+    } while (pass <= npanjang - 1);
+}
