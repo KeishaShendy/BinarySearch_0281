@@ -75,3 +75,33 @@ void display()
     cout << endl;
     cout << "\nJumlah Pass = " << npanjang - 1 << endl;
 }
+void binarySearch()
+{
+    cout << "\nMasukan element yang ingin dicari = ";
+    cin >> x;
+
+    int low = 0;
+    int high = npanjang - 1;
+
+    do
+    {
+        int mid = (low + high) / 2;
+
+        if (elemen[mid] == x)
+        {
+            cout << x << " ditemukan pada index ke-" << mid << endl;
+            return;
+        }
+        else if (x < elemen[mid])
+        {
+            high = mid - 1;
+        }
+        else
+        {
+            low = mid + 1;
+        }
+
+    } while (low <= high);
+
+    cout << x << " tidak ditemukan" << endl;
+}
