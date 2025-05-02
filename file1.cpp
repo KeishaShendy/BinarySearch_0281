@@ -105,3 +105,10 @@ void binarySearch()
 
     cout << x << " tidak ditemukan" << endl;
 }
+int main()
+{
+    input();
+    bubleshortArray();
+    display();
+    binarySearch();
+}
