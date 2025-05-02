@@ -56,3 +56,22 @@ void bubleshortArray()
 
     } while (pass <= npanjang - 1);
 }
+void display()
+{
+    cout << endl;
+    cout << "================================" << endl;
+    cout << "Element Array yang telah disusun" << endl;
+    cout << "================================" << endl;
+
+    for (int j = 0; j < npanjang; j++)
+    {
+        cout << elemen[j];
+        if (j < npanjang - 1)
+        {
+            cout << " --> ";
+        }
+    }
+
+    cout << endl;
+    cout << "\nJumlah Pass = " << npanjang - 1 << endl;
+}
